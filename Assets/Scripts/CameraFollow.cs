@@ -18,6 +18,9 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        transform.LookAt(targetObject.transform.position);
+        Quaternion.LookRotation(targetObject.transform.position);
         transform.position = targetObject.transform.position + offset;
+        
     }
 }
